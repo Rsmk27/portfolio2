@@ -3,44 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srinivasa Manikanta Rajapantula</title>
+    <title>Srinivasa Manikanta Rajapantula - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0c0c0d;
-            color: #d1d5db;
+            background-color: #0a0a0c;
+            color: #e0e0e0;
+            overflow-x: hidden;
         }
         .text-gradient {
-            background-image: linear-gradient(to right, #2DD4BF, #06B6D4);
+            background-image: linear-gradient(to right, #00C6FF, #0072FF);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .hover-gradient-text:hover {
+            background-image: linear-gradient(to right, #66d9ef, #8d44ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            border-color: #0072FF;
+            transition: all 0.3s ease;
+        }
+        /* Style for the mobile menu */
+        #mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
     </style>
 </head>
-<body class="bg-zinc-950 text-gray-200 antialiased">
+<body class="bg-[#0a0a0c] text-[#e0e0e0] antialiased">
 
     <!-- Header & Navigation -->
-    <header class="bg-zinc-900 shadow-md py-4 px-6 md:px-12 fixed top-0 w-full z-50">
+    <header class="bg-[#121212] shadow-xl py-4 px-6 md:px-12 fixed top-0 w-full z-50 transition-all duration-300">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-teal-400">RSMK</a>
-            <nav class="hidden md:flex space-x-6">
-                <a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a>
-                <a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a>
-                <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+            <a href="#" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00C6FF] to-[#0072FF] rounded-lg">RSMK</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-[#9e9e9e] text-lg hover-gradient-text transition-colors duration-300">About</a>
+                <a href="#projects" class="text-[#9e9e9e] text-lg hover-gradient-text transition-colors duration-300">Projects</a>
+                <a href="#contact" class="text-[#9e9e9e] text-lg hover-gradient-text transition-colors duration-300">Contact</a>
             </nav>
-            <button id="menu-button" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <button id="menu-button" class="md:hidden text-[#9e9e9e] hover:text-[#e0e0e0] focus:outline-none rounded-md">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-zinc-900 shadow-lg py-4 transition-transform duration-300 ease-in-out transform -translate-y-full">
-            <a href="#about" class="block py-2 px-6 text-gray-400 hover:bg-zinc-800 transition-colors">About</a>
-            <a href="#projects" class="block py-2 px-6 text-gray-400 hover:bg-zinc-800 transition-colors">Projects</a>
-            <a href="#contact" class="block py-2 px-6 text-gray-400 hover:bg-zinc-800 transition-colors">Contact</a>
+        <div id="mobile-menu" class="md:hidden absolute top-16 left-0 w-full bg-[#121212] shadow-lg py-4">
+            <a href="#about" class="block py-3 px-6 text-[#9e9e9e] hover:bg-[#1f1f1f] transition-colors rounded-md">About</a>
+            <a href="#projects" class="block py-3 px-6 text-[#9e9e9e] hover:bg-[#1f1f1f] transition-colors rounded-md">Projects</a>
+            <a href="#contact" class="block py-3 px-6 text-[#9e9e9e] hover:bg-[#1f1f1f] transition-colors rounded-md">Contact</a>
         </div>
     </header>
 
@@ -50,109 +71,110 @@
         <!-- About Section -->
         <section id="about" class="py-20 text-center md:text-left">
             <div class="container mx-auto px-6 md:px-12 max-w-5xl">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4">
-                    Hi, I'm <span class="text-gradient">Srinivasa Manikanta Rajapantula</span>.
+                <p class="text-xl text-[#9e9e9e] font-light mb-2">Hello, I'm</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-[#e0e0e0] mb-6 leading-tight">
+                    <span class="text-gradient">Srinivasa Manikanta Rajapantula</span>.
                 </h1>
-                <p class="text-lg md:text-xl text-gray-400 max-w-4xl mx-auto md:mx-0 mb-8 leading-relaxed">
+                <p class="text-xl text-[#9e9e9e] max-w-4xl mx-auto md:mx-0 mb-8 leading-relaxed">
                     Hello! I’m Srinivasa Manikanta Rajapantula (RSMK), an enthusiastic Electrical and Electronics Engineering student with a strong curiosity for innovation and technology. I believe engineering is not just about solving problems—it’s about creating smarter, sustainable solutions that can make a real difference in people’s lives.
                 </p>
-                <p class="text-lg text-gray-400 max-w-4xl mx-auto md:mx-0 mb-8 leading-relaxed">
+                <p class="text-xl text-[#9e9e9e] max-w-4xl mx-auto md:mx-0 mb-12 leading-relaxed">
                     Over time, I’ve worked on diverse projects ranging from embedded systems and IoT applications to Arduino-based automation, smart energy solutions, and even creative digital tools like websites, bots, and interactive applications. For me, every project is an opportunity to learn, experiment, and push boundaries.
                 </p>
                 
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 mt-12">I am particularly interested in:</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-semibold text-white mb-8 mt-12 text-center md:text-left">My Interests</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                     <!-- Interest Card 1 -->
-                    <div class="bg-zinc-800 p-6 rounded-xl shadow-md border-2 border-zinc-700 hover:border-teal-400 transition-colors duration-300">
-                        <p class="text-lg font-semibold text-white">Green Tech & Smart Energy</p>
-                        <p class="text-sm text-gray-400 mt-2">Building sustainable energy systems for the future.</p>
+                    <div class="bg-[#1a1a1c] p-8 rounded-2xl shadow-lg border-2 border-transparent card-hover">
+                        <p class="text-xl font-semibold text-[#e0e0e0]">Green Tech & Smart Energy</p>
+                        <p class="text-base text-[#9e9e9e] mt-2">Building sustainable energy systems for the future.</p>
                     </div>
                     <!-- Interest Card 2 -->
-                    <div class="bg-zinc-800 p-6 rounded-xl shadow-md border-2 border-zinc-700 hover:border-teal-400 transition-colors duration-300">
-                        <p class="text-lg font-semibold text-white">Autonomous & Decentralized Grids</p>
-                        <p class="text-sm text-gray-400 mt-2">Exploring how smart energy networks can self-heal and adapt.</p>
+                    <div class="bg-[#1a1a1c] p-8 rounded-2xl shadow-lg border-2 border-transparent card-hover">
+                        <p class="text-xl font-semibold text-[#e0e0e0]">Autonomous & Decentralized Grids</p>
+                        <p class="text-base text-[#9e9e9e] mt-2">Exploring how smart energy networks can self-heal and adapt.</p>
                     </div>
                     <!-- Interest Card 3 -->
-                    <div class="bg-zinc-800 p-6 rounded-xl shadow-md border-2 border-zinc-700 hover:border-teal-400 transition-colors duration-300">
-                        <p class="text-lg font-semibold text-white">Electronics & Embedded Systems</p>
-                        <p class="text-sm text-gray-400 mt-2">Designing practical solutions with microcontrollers and sensors.</p>
+                    <div class="bg-[#1a1a1c] p-8 rounded-2xl shadow-lg border-2 border-transparent card-hover">
+                        <p class="text-xl font-semibold text-[#e0e0e0]">Electronics & Embedded Systems</p>
+                        <p class="text-base text-[#9e9e9e] mt-2">Designing practical solutions with microcontrollers and sensors.</p>
                     </div>
                     <!-- Interest Card 4 -->
-                    <div class="bg-zinc-800 p-6 rounded-xl shadow-md border-2 border-zinc-700 hover:border-teal-400 transition-colors duration-300">
-                        <p class="text-lg font-semibold text-white">Web & Creative Tech</p>
-                        <p class="text-sm text-gray-400 mt-2">Blending engineering with creativity to build interactive platforms.</p>
+                    <div class="bg-[#1a1a1c] p-8 rounded-2xl shadow-lg border-2 border-transparent card-hover">
+                        <p class="text-xl font-semibold text-[#e0e0e0]">Web & Creative Tech</p>
+                        <p class="text-base text-[#9e9e9e] mt-2">Blending engineering with creativity to build interactive platforms.</p>
                     </div>
                 </div>
 
-                <p class="text-lg text-gray-400 max-w-4xl mx-auto md:mx-0 mt-8 leading-relaxed">
+                <p class="text-lg text-[#9e9e9e] max-w-4xl mx-auto md:mx-0 mt-12 leading-relaxed">
                     When I’m not tinkering with circuits or coding, I enjoy learning new tools like Blender for 3D design and experimenting with ways to bring my ideas to life—whether it’s through hardware projects, simulations, or digital creations. My long-term goal is to bridge core engineering with modern innovations, positioning myself at the intersection of electrical systems, smart energy, and technology-driven solutions. I want my work to reflect not just technical skills, but also creativity, responsibility, and impact.
                 </p>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-20 bg-zinc-900">
+        <section id="projects" class="py-20 bg-[#121212]">
             <div class="container mx-auto px-6 md:px-12">
-                <h2 class="text-4xl font-bold text-center text-white mb-12">My Projects</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <h2 class="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#00C6FF] to-[#0072FF] mb-12">My Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                     
                     <!-- Project Card 1 -->
-                    <div class="bg-zinc-800 rounded-xl shadow-md overflow-hidden border-2 border-zinc-700 transform transition-transform hover:scale-105 hover:shadow-xl hover:border-sky-400">
-                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+1" alt="Project 1" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-white mb-2">Project Title One</h3>
-                            <p class="text-gray-400 mb-4">A brief description of your project. Mention the technologies used and the purpose of the project.</p>
-                            <a href="#" class="text-teal-400 hover:text-teal-500 transition-colors font-semibold">View Project &rarr;</a>
+                    <div class="bg-[#1a1a1c] rounded-2xl shadow-xl overflow-hidden border-2 border-transparent card-hover">
+                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+1" alt="Project 1" class="w-full h-56 object-cover rounded-t-2xl">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-[#e0e0e0] mb-2">Project Title One</h3>
+                            <p class="text-[#9e9e9e] mb-4">A brief description of your project. Mention the technologies used and the purpose of the project.</p>
+                            <a href="#" class="text-transparent bg-clip-text bg-gradient-to-r from-[#00C6FF] to-[#0072FF] font-semibold">View Project &rarr;</a>
                         </div>
                     </div>
 
                     <!-- Project Card 2 -->
-                    <div class="bg-zinc-800 rounded-xl shadow-md overflow-hidden border-2 border-zinc-700 transform transition-transform hover:scale-105 hover:shadow-xl hover:border-sky-400">
-                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-white mb-2">Project Title Two</h3>
-                            <p class="text-gray-400 mb-4">A brief description of your project. Mention the technologies used and the purpose of the project.</p>
-                            <a href="#" class="text-teal-400 hover:text-teal-500 transition-colors font-semibold">View Project &rarr;</a>
+                    <div class="bg-[#1a1a1c] rounded-2xl shadow-xl overflow-hidden border-2 border-transparent card-hover">
+                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+2" alt="Project 2" class="w-full h-56 object-cover rounded-t-2xl">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-[#e0e0e0] mb-2">Project Title Two</h3>
+                            <p class="text-[#9e9e9e] mb-4">A brief description of your project. Mention the technologies used and the purpose of the project.</p>
+                            <a href="#" class="text-transparent bg-clip-text bg-gradient-to-r from-[#00C6FF] to-[#0072FF] font-semibold">View Project &rarr;</a>
                         </div>
                     </div>
 
                     <!-- Project Card 3 -->
-                    <div class="bg-zinc-800 rounded-xl shadow-md overflow-hidden border-2 border-zinc-700 transform transition-transform hover:scale-105 hover:shadow-xl hover:border-sky-400">
-                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+3" alt="Project 3" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-white mb-2">Project Title Three</h3>
-                            <p class="text-gray-400 mb-4">A brief description of your project. Mention the technologies used and the purpose of the project.</p>
-                            <a href="#" class="text-teal-400 hover:text-teal-500 transition-colors font-semibold">View Project &rarr;</a>
+                    <div class="bg-[#1a1a1c] rounded-2xl shadow-xl overflow-hidden border-2 border-transparent card-hover">
+                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+3" alt="Project 3" class="w-full h-56 object-cover rounded-t-2xl">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-[#e0e0e0] mb-2">Project Title Three</h3>
+                            <p class="text-[#9e9e9e] mb-4">A brief description of your project. Mention the technologies used and the purpose of the project.</p>
+                            <a href="#" class="text-transparent bg-clip-text bg-gradient-to-r from-[#00C6FF] to-[#0072FF] font-semibold">View Project &rarr;</a>
                         </div>
                     </div>
 
                     <!-- Project Card 4 -->
-                    <div class="bg-zinc-800 rounded-xl shadow-md overflow-hidden border-2 border-zinc-700 transform transition-transform hover:scale-105 hover:shadow-xl hover:border-sky-400">
-                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+4" alt="Project 4" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-white mb-2">Project Title Four</h3>
-                            <p class="text-gray-400 mb-4">A brief description of your project. Mention the technologies used and the purpose of the project.</p>
-                            <a href="#" class="text-teal-400 hover:text-teal-500 transition-colors font-semibold">View Project &rarr;</a>
+                    <div class="bg-[#1a1a1c] rounded-2xl shadow-xl overflow-hidden border-2 border-transparent card-hover">
+                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+4" alt="Project 4" class="w-full h-56 object-cover rounded-t-2xl">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-[#e0e0e0] mb-2">Project Title Four</h3>
+                            <p class="text-[#9e9e9e] mb-4">A brief description of your project. Mention the technologies used and the purpose of the project.</p>
+                            <a href="#" class="text-transparent bg-clip-text bg-gradient-to-r from-[#00C6FF] to-[#0072FF] font-semibold">View Project &rarr;</a>
                         </div>
                     </div>
 
                     <!-- Project Card 5 -->
-                    <div class="bg-zinc-800 rounded-xl shadow-md overflow-hidden border-2 border-zinc-700 transform transition-transform hover:scale-105 hover:shadow-xl hover:border-sky-400">
-                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+5" alt="Project 5" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-white mb-2">Project Title Five</h3>
-                            <p class="text-gray-400 mb-4">A brief description of your project. Mention the technologies used and the purpose of the project.</p>
-                            <a href="#" class="text-teal-400 hover:text-teal-500 transition-colors font-semibold">View Project &rarr;</a>
+                    <div class="bg-[#1a1a1c] rounded-2xl shadow-xl overflow-hidden border-2 border-transparent card-hover">
+                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+5" alt="Project 5" class="w-full h-56 object-cover rounded-t-2xl">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-[#e0e0e0] mb-2">Project Title Five</h3>
+                            <p class="text-[#9e9e9e] mb-4">A brief description of your project. Mention the technologies used and the purpose of the project.</p>
+                            <a href="#" class="text-transparent bg-clip-text bg-gradient-to-r from-[#00C6FF] to-[#0072FF] font-semibold">View Project &rarr;</a>
                         </div>
                     </div>
 
                     <!-- Project Card 6 -->
-                    <div class="bg-zinc-800 rounded-xl shadow-md overflow-hidden border-2 border-zinc-700 transform transition-transform hover:scale-105 hover:shadow-xl hover:border-sky-400">
-                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+6" alt="Project 6" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-white mb-2">Project Title Six</h3>
-                            <p class="text-gray-400 mb-4">A brief description of your project. Mention the technologies used and the purpose of the project.</p>
-                            <a href="#" class="text-teal-400 hover:text-teal-500 transition-colors font-semibold">View Project &rarr;</a>
+                    <div class="bg-[#1a1a1c] rounded-2xl shadow-xl overflow-hidden border-2 border-transparent card-hover">
+                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Project+6" alt="Project 6" class="w-full h-56 object-cover rounded-t-2xl">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-[#e0e0e0] mb-2">Project Title Six</h3>
+                            <p class="text-[#9e9e9e] mb-4">A brief description of your project. Mention the technologies used and the purpose of the project.</p>
+                            <a href="#" class="text-transparent bg-clip-text bg-gradient-to-r from-[#00C6FF] to-[#0072FF] font-semibold">View Project &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -160,23 +182,23 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-zinc-950">
+        <section id="contact" class="py-20 bg-[#0a0a0c]">
             <div class="container mx-auto px-6 md:px-12 max-w-2xl">
-                <h2 class="text-4xl font-bold text-center text-white mb-8">Get In Touch</h2>
-                <form class="bg-zinc-900 p-8 rounded-xl shadow-md border-2 border-zinc-800">
-                    <div class="mb-4">
-                        <label for="name" class="block text-gray-400 font-bold mb-2">Name</label>
-                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-zinc-700 rounded-lg bg-zinc-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-sky-400">
+                <h2 class="text-4xl font-bold text-center text-[#e0e0e0] mb-12">Get In Touch</h2>
+                <form class="bg-[#121212] p-10 rounded-2xl shadow-xl border-2 border-transparent">
+                    <div class="mb-6">
+                        <label for="name" class="block text-[#9e9e9e] font-semibold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-5 py-3 border border-[#2a2a2c] rounded-lg bg-[#1a1a1c] text-[#e0e0e0] focus:outline-none focus:ring-2 focus:ring-[#0072FF]">
                     </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-gray-400 font-bold mb-2">Email</label>
-                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-zinc-700 rounded-lg bg-zinc-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-sky-400">
+                    <div class="mb-6">
+                        <label for="email" class="block text-[#9e9e9e] font-semibold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-5 py-3 border border-[#2a2a2c] rounded-lg bg-[#1a1a1c] text-[#e0e0e0] focus:outline-none focus:ring-2 focus:ring-[#0072FF]">
                     </div>
-                    <div class="mb-4">
-                        <label for="message" class="block text-gray-400 font-bold mb-2">Message</label>
-                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-zinc-700 rounded-lg bg-zinc-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-sky-400"></textarea>
+                    <div class="mb-6">
+                        <label for="message" class="block text-[#9e9e9e] font-semibold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-5 py-3 border border-[#2a2a2c] rounded-lg bg-[#1a1a1c] text-[#e0e0e0] focus:outline-none focus:ring-2 focus:ring-[#0072FF]"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-teal-500 text-white font-bold py-3 rounded-lg shadow-lg hover:bg-teal-600 transition-colors">
+                    <button type="submit" class="w-full bg-gradient-to-r from-[#00C6FF] to-[#0072FF] text-[#e0e0e0] font-bold py-4 rounded-lg shadow-lg hover:from-[#0072FF] hover:to-[#00C6FF] transition-all duration-300">
                         Send Message
                     </button>
                 </form>
@@ -185,13 +207,13 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-zinc-900 text-gray-400 py-8 text-center">
+    <footer class="bg-[#121212] text-[#9e9e9e] py-8 text-center">
         <div class="container mx-auto px-6 md:px-12">
             <p>&copy; 2024 Srinivasa Manikanta Rajapantula. All rights reserved.</p>
-            <div class="mt-4 flex justify-center space-x-4">
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="text-[#9e9e9e] hover:text-[#e0e0e0] transition-colors duration-300">Twitter</a>
+                <a href="#" class="text-[#9e9e9e] hover:text-[#e0e0e0] transition-colors duration-300">LinkedIn</a>
+                <a href="#" class="text-[#9e9e9e] hover:text-[#e0e0e0] transition-colors duration-300">GitHub</a>
             </div>
         </div>
     </footer>
@@ -201,7 +223,7 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('active');
         });
     </script>
 </body>
