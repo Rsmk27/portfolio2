@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "AI Chatbot with GPT-OSS",
+    "description": "An interactive chatbot integrated with open-source GPT models to provide intelligent and conversational responses.",
+    "techStack": ["React", "Hugging Face API", "JavaScript", "CSS"],
+    "githubLink": "https://github.com/yourusername/ai-chatbot",
+    "liveDemo": "https://yourusername.vercel.app/chatbot",
+    "image": "https://via.placeholder.com/400x250/333/FFFFFF?text=AI+Chatbot"
+  },
+  {
+    "id": 2,
+    "title": "OhmDecoder",
+    "description": "A web-based tool for decoding resistor color codes, built to assist electronics enthusiasts and students.",
+    "techStack": ["HTML", "CSS", "JavaScript", "React"],
+    "githubLink": "https://github.com/yourusername/ohm-decoder",
+    "liveDemo": "https://yourusername.vercel.app/ohm-decoder",
+    "image": "https://via.placeholder.com/400x250/333/FFFFFF?text=OhmDecoder"
+  },
+  {
+    "id": 3,
+    "title": "Green Tech Energy Monitor",
+    "description": "A conceptual project dashboard for monitoring energy consumption and promoting sustainable energy use.",
+    "techStack": ["React", "Framer Motion", "JSON"],
+    "githubLink": "https://github.com/yourusername/green-tech-dashboard",
+    "liveDemo": "https://yourusername.vercel.app/energy-monitor",
+    "image": "https://via.placeholder.com/400x250/333/FFFFFF?text=Green+Tech"
+  }
+]
