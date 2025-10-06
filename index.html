@@ -12,25 +12,34 @@
   <!-- custom css -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- google fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
   <meta name="description" content="RSMK — EEE student, embedded systems & smart energy projects: OhmDecoder, Autonomous Grids research, and an AI chatbot." />
 </head>
+
 <body>
   <main>
-    <!-- SIDEBAR -->
+    <!-- Sidebar -->
     <aside class="sidebar" data-sidebar>
       <div class="sidebar-info">
         <figure class="avatar-box">
-          <!-- replace with your portrait -->
-          <img src="./assets/images/my-avatar.png" alt="RSMK" width="96">
+          <img src="./assets/images/my-avatar.png" alt="RSMK" width="96" id="avatar">
         </figure>
 
         <div class="info-content">
           <h1 class="name" title="RSMK">RSMK</h1>
-          <p class="title">Undergraduate — Electrical &amp; Electronics Engineering</p>
+          <p class="title">Electrical & Electronics Engineering Student</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -41,7 +50,6 @@
 
       <div class="sidebar-info_more">
         <div class="separator"></div>
-
         <ul class="contacts-list">
           <li class="contact-item">
             <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
@@ -50,379 +58,162 @@
               <a href="mailto:rsmk27@gmail.com" class="contact-link">rsmk27@gmail.com</a>
             </div>
           </li>
-
           <li class="contact-item">
             <div class="icon-box"><ion-icon name="logo-github"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">GitHub</p>
-              <a href="https://github.com/rsmk27" class="contact-link" target="_blank" rel="noopener">github.com/rsmk27</a>
+              <a href="https://github.com/rsmk27" target="_blank">github.com/rsmk27</a>
             </div>
           </li>
-
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Class</p>
-              <time datetime="2025">B.Tech — Electrical &amp; Electronics (ongoing)</time>
-            </div>
-          </li>
-
           <li class="contact-item">
             <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Location</p>
-              <address>Pune, India</address>
+              <address>India</address>
             </div>
-          </li>
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="https://linkedin.com/in/rsmk27" class="social-link" target="_blank" rel="noopener">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://twitter.com/rsmk27" class="social-link" target="_blank" rel="noopener">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://instagram.com/rsmk27" class="social-link" target="_blank" rel="noopener">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
           </li>
         </ul>
       </div>
     </aside>
 
-    <!-- MAIN CONTENT -->
+    <!-- Main Content -->
     <div class="main-content">
-      <!-- NAVBAR -->
       <nav class="navbar">
         <ul class="navbar-list">
           <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li>
           <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
         </ul>
       </nav>
 
-      <!-- ABOUT -->
+      <!-- About -->
       <article class="about active" data-page="about">
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+        <section class="about-text">
+          <p>I am <b>RSMK</b>, a passionate Electrical & Electronics Engineering student who believes in building reliable systems that blend classical design discipline with forward-looking innovation. My interests lie in embedded systems, smart energy, and automation — always balancing theory with practical implementation.</p>
+        </section>
+      </article>
+
+      <!-- Projects -->
+      <article class="portfolio" data-page="projects">
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
         </header>
 
-        <section class="about-text">
-          <p>
-            I am RSMK, an undergraduate in Electrical &amp; Electronics Engineering with a practical, research-oriented approach.
-            I value engineering traditions — rigorous analysis, testable designs, and clear documentation — while building toward
-            resilient, renewable, and intelligent power systems. My work blends embedded systems, power electronics, and software.
-          </p>
-
-          <p>
-            I build things that last: efficient hardware prototypes, clear simulations, and production-ready code. I prefer methodical
-            design: understand requirements, design conservatively, test thoroughly, then iterate. Current interests include autonomous grids,
-            energy-harvesting systems, and edge AI for control.
-          </p>
-        </section>
-
-        <!-- SERVICES -->
-        <section class="service">
-          <h3 class="h3 service-title">What I do</h3>
-
-          <ul class="service-list">
-            <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/icon-dev.svg" alt="embedded" width="40"></div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Embedded Systems & Firmware</h4>
-                <p class="service-item-text">Microcontroller firmware, sensor integration, motor control, and real-time systems.</p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/icon-power.svg" alt="power" width="40"></div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Power Electronics & Smart Energy</h4>
-                <p class="service-item-text">Converter design, inverter control, and conceptual work on decentralized, self-healing grids.</p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/icon-web.svg" alt="web" width="40"></div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Full-Stack & Research Tools</h4>
-                <p class="service-item-text">Web frontends for demos, simulations, and data dashboards (Next.js / simple server APIs).</p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-icon-box"><img src="./assets/images/icon-ai.svg" alt="ai" width="40"></div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">AI-Assisted Tools</h4>
-                <p class="service-item-text">Integrating small ML models where they improve control, prediction, or UX—pragmatically and safely.</p>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <!-- TESTIMONIALS -->
-        <section class="testimonials">
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-            <li class="testimonials-item">
-              <div class="content-card">
-                <figure class="testimonials-avatar-box"><img src="./assets/images/avatar-1.png" alt="Mentor" width="60"></figure>
-                <h4 class="h4 testimonials-item-title">Prof. S. Rao</h4>
-                <div class="testimonials-text">
-                  <p>RSMK demonstrates disciplined thinking: clear requirements, sound experiments, and well-documented results.</p>
-                </div>
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card">
-                <figure class="testimonials-avatar-box"><img src="./assets/images/avatar-2.png" alt="Colleague" width="60"></figure>
-                <h4 class="h4 testimonials-item-title">Dipti Sinha</h4>
-                <div class="testimonials-text">
-                  <p>Practical, calm under pressure, and always ready to improve designs iteratively — a reliable collaborator.</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <!-- CLIENTS / PARTNERS -->
-        <section class="clients">
-          <h3 class="h3 clients-title">Notable projects</h3>
-          <ul class="clients-list has-scrollbar">
-            <li class="clients-item"><a href="https://rsmk27.github.io/OhmDecoder" target="_blank" rel="noopener">OhmDecoder — Resistor tool</a></li>
-            <li class="clients-item"><a href="https://github.com/rsmk27/ai-chatbot-gpt-oss" target="_blank" rel="noopener">AI Chatbot — GPT-OSS integration</a></li>
-            <li class="clients-item"><a href="#" target="_blank" rel="noopener">Autonomous Grids — research notes</a></li>
-          </ul>
-        </section>
-      </article>
-
-      <!-- RESUME -->
-      <article class="resume" data-page="resume">
-        <header><h2 class="h2 article-title">Resume</h2></header>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Undergraduate — Electrical &amp; Electronics Engineering</h4>
-              <span>Ongoing</span>
-              <p class="timeline-text">Courses: Power Systems, Control Systems, Embedded Systems, Power Electronics.</p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Self-directed learning & projects</h4>
-              <span>2023 — Present</span>
-              <p class="timeline-text">Projects in embedded control, energy systems, and web-enabled demos (see portfolio).</p>
-            </li>
-          </ol>
-        </section>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Project: OhmDecoder (resistor tool)</h4>
-              <span>2025</span>
-              <p class="timeline-text">Built and deployed a lightweight resistor color-code tool (portfolio web app).</p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Project: AI Chatbot (GPT-OSS)</h4>
-              <span>2025</span>
-              <p class="timeline-text">Web-based chatbot built with Next.js and Hugging Face integration for research/demos.</p>
-            </li>
-          </ol>
-        </section>
-
-        <section class="skill">
-          <h3 class="h3 skills-title">Skills</h3>
-          <ul class="skills-list content-card">
-            <li class="skills-item">
-              <div class="title-wrapper"><h5 class="h5">Embedded C & Firmware</h5><data value="85">85%</data></div>
-              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:85%"></div></div>
-            </li>
-
-            <li class="skills-item">
-              <div class="title-wrapper"><h5 class="h5">Power Electronics & Simulation</h5><data value="75">75%</data></div>
-              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:75%"></div></div>
-            </li>
-
-            <li class="skills-item">
-              <div class="title-wrapper"><h5 class="h5">Python & Data Tools</h5><data value="80">80%</data></div>
-              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:80%"></div></div>
-            </li>
-
-            <li class="skills-item">
-              <div class="title-wrapper"><h5 class="h5">PCB Design & Hands-on Prototyping</h5><data value="70">70%</data></div>
-              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:70%"></div></div>
-            </li>
-          </ul>
-        </section>
-      </article>
-
-      <!-- PORTFOLIO -->
-      <article class="portfolio" data-page="portfolio">
-        <header><h2 class="h2 article-title">Portfolio</h2></header>
-
         <section class="projects">
-          <ul class="filter-list">
-            <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
-            <li class="filter-item"><button data-filter-btn>Embedded</button></li>
-            <li class="filter-item"><button data-filter-btn>Smart Energy</button></li>
-            <li class="filter-item"><button data-filter-btn>Web / Tools</button></li>
-          </ul>
-
-          <div class="filter-select-box">
-            <button class="filter-select" data-select>
-              <div class="select-value" data-selecct-value>Select category</div>
-              <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
-            </button>
-            <ul class="select-list">
-              <li class="select-item"><button data-select-item>All</button></li>
-              <li class="select-item"><button data-select-item>Embedded</button></li>
-              <li class="select-item"><button data-select-item>Smart Energy</button></li>
-              <li class="select-item"><button data-select-item>Web / Tools</button></li>
-            </ul>
+          <div class="project-item" onclick="openModal('ohmdecoder')">
+            <img src="./assets/images/project-ohmdecoder.png" alt="OhmDecoder">
+            <h3>OhmDecoder — Resistor Code Tool</h3>
           </div>
 
-          <ul class="project-list">
-            <!-- OhmDecoder -->
-            <li class="project-item active" data-filter-item data-category="Web / Tools">
-              <a href="https://rsmk27.github.io/OhmDecoder" target="_blank" rel="noopener">
-                <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                  <img src="./assets/images/project-ohmdecoder.png" alt="OhmDecoder" loading="lazy">
-                </figure>
-                <h3 class="project-title">OhmDecoder</h3>
-                <p class="project-category">Web tool — electronics utilities</p>
-              </a>
-            </li>
+          <div class="project-item" onclick="openModal('chatbot')">
+            <img src="./assets/images/project-chatbot.png" alt="AI Chatbot">
+            <h3>AI Chatbot — GPT-OSS</h3>
+          </div>
 
-            <!-- AI Chatbot -->
-            <li class="project-item active" data-filter-item data-category="Web / Tools">
-              <a href="https://github.com/rsmk27/ai-chatbot-gpt-oss" target="_blank" rel="noopener">
-                <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                  <img src="./assets/images/project-chatbot.png" alt="AI Chatbot" loading="lazy">
-                </figure>
-                <h3 class="project-title">AI Chatbot (GPT-OSS)</h3>
-                <p class="project-category">Next.js / Hugging Face demo</p>
-              </a>
-            </li>
-
-            <!-- Autonomous Grid concept -->
-            <li class="project-item active" data-filter-item data-category="Smart Energy">
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                  <img src="./assets/images/project-autogrid.png" alt="Autonomous Grid" loading="lazy">
-                </figure>
-                <h3 class="project-title">Autonomous Grids — Research Prototype</h3>
-                <p class="project-category">Decentralized, self-healing microgrid simulation</p>
-              </a>
-            </li>
-
-            <!-- Misc: Blender learning -->
-            <li class="project-item active" data-filter-item data-category="Embedded">
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                  <img src="./assets/images/project-blender.png" alt="Blender Practice" loading="lazy">
-                </figure>
-                <h3 class="project-title">Blender — Visual Prototypes</h3>
-                <p class="project-category">3D elements for portfolio & UI demos</p>
-              </a>
-            </li>
-          </ul>
+          <div class="project-item" onclick="openModal('autogrid')">
+            <img src="./assets/images/project-autogrid.png" alt="Autonomous Grid">
+            <h3>Autonomous Grids — Smart Energy Research</h3>
+          </div>
         </section>
       </article>
 
-      <!-- BLOG -->
-      <article class="blog" data-page="blog">
-        <header><h2 class="h2 article-title">Blog</h2></header>
-
-        <section class="blog-posts">
-          <ul class="blog-posts-list">
-            <li class="blog-post-item">
-              <a href="#">
-                <figure class="blog-banner-box"><img src="./assets/images/blog-energy.jpg" alt="Energy" loading="lazy"></figure>
-                <div class="blog-content">
-                  <div class="blog-meta"><p class="blog-category">Research</p><span class="dot"></span><time datetime="2025-06-10">June 10, 2025</time></div>
-                  <h3 class="h3 blog-item-title">Autonomous grids: a pragmatic roadmap</h3>
-                  <p class="blog-text">A forward-looking plan to build small, decentralized microgrids with local intelligence and graceful failure modes.</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-                <figure class="blog-banner-box"><img src="./assets/images/blog-embedded.jpg" alt="Embedded" loading="lazy"></figure>
-                <div class="blog-content">
-                  <div class="blog-meta"><p class="blog-category">Embedded</p><span class="dot"></span><time datetime="2025-03-01">Mar 1, 2025</time></div>
-                  <h3 class="h3 blog-item-title">Practical firmware testing for motor drivers</h3>
-                  <p class="blog-text">Test patterns, failure modes, and a checklist that saves time during bench validation.</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </section>
-      </article>
-
-      <!-- CONTACT -->
+      <!-- Contact -->
       <article class="contact" data-page="contact">
-        <header><h2 class="h2 article-title">Contact</h2></header>
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
 
         <section class="contact-form">
-          <h3 class="h3 form-title">Get in touch</h3>
-          <form action="#" class="form" data-form>
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-            <button class="form-btn" type="submit" data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon><span>Send Message</span>
-            </button>
+          <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="form-btn">Send</button>
           </form>
-        </section>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <!-- keep the existing embed or replace with coordinates -->
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z44CS44CS" 
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
+          <p id="formStatus"></p>
         </section>
       </article>
     </div>
   </main>
 
-  <!-- custom js -->
-  <script src="./assets/js/script.js"></script>
+  <!-- Modal for project details -->
+  <div id="projectModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
 
-  <!-- ionicons -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    // Navbar switching
+    const navLinks = document.querySelectorAll('[data-nav-link]');
+    const pages = document.querySelectorAll('[data-page]');
+    navLinks.forEach((link, i) => {
+      link.addEventListener('click', () => {
+        pages.forEach(p => p.classList.remove('active'));
+        navLinks.forEach(l => l.classList.remove('active'));
+        pages[i].classList.add('active');
+        link.classList.add('active');
+      });
+    });
+
+    // Modal system
+    const modal = document.getElementById('projectModal');
+    const modalBody = document.getElementById('modalBody');
+    function openModal(project) {
+      let content = '';
+      if (project === 'ohmdecoder') {
+        content = `<h2>OhmDecoder</h2><p>A simple yet powerful resistor color code calculator, built with HTML, CSS, and JS.</p>`;
+      } else if (project === 'chatbot') {
+        content = `<h2>AI Chatbot</h2><p>A web-based chatbot powered by GPT-OSS integration using Next.js and Hugging Face.</p>`;
+      } else if (project === 'autogrid') {
+        content = `<h2>Autonomous Grids</h2><p>Research concept for decentralized, self-healing microgrids leveraging smart control logic.</p>`;
+      }
+      modalBody.innerHTML = content;
+      modal.classList.remove('hidden');
+    }
+    function closeModal() { modal.classList.add('hidden'); }
+
+    // Form submission simulation
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      status.textContent = 'Sending...';
+      setTimeout(() => {
+        status.textContent = 'Message sent successfully!';
+        form.reset();
+      }, 1000);
+    });
+
+    // GSAP animations
+    gsap.from('.sidebar', {x: -200, opacity: 0, duration: 1});
+    gsap.from('.navbar', {y: -50, opacity: 0, duration: 1, delay: 0.5});
+    gsap.utils.toArray('.project-item').forEach((item, i) => {
+      gsap.from(item, {scrollTrigger: item, y: 50, opacity: 0, duration: 0.6, delay: i * 0.1});
+    });
+  </script>
+
+  <style>
+    body {font-family: 'Poppins', sans-serif; background: #0f111a; color: #fff; margin: 0; overflow-x: hidden;}
+    main {display: flex; height: 100vh;}
+    .sidebar {width: 280px; background: #161a25; padding: 20px; box-shadow: 2px 0 10px rgba(0,0,0,0.3);}
+    .main-content {flex: 1; padding: 40px; overflow-y: auto;}
+    .navbar {display: flex; justify-content: center; margin-bottom: 30px;}
+    .navbar-link {background: none; border: none; color: #fff; font-size: 18px; margin: 0 15px; cursor: pointer; position: relative;}
+    .navbar-link.active::after {content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px; background: #4ade80;}
+    .article-title {font-size: 28px; margin-bottom: 10px; color: #4ade80;}
+    .project-item {background: #1e2230; border-radius: 10px; padding: 15px; text-align: center; margin: 10px; cursor: pointer; transition: 0.3s;}
+    .project-item:hover {transform: scale(1.05); background: #242a3b;}
+    .project-item img {width: 100%; border-radius: 10px;}
+    .form-btn {background: #4ade80; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; color: #000;}
+    .modal {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center;}
+    .modal.hidden {display: none;}
+    .modal-content {background: #1e2230; padding: 30px; border-radius: 10px; max-width: 600px; color: #fff;}
+    .close {position: absolute; top: 20px; right: 30px; cursor: pointer; font-size: 28px;}
+  </style>
 </body>
 </html>
